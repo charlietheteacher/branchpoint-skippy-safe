@@ -1,22 +1,36 @@
 # SKIPPY SAFE: Best Lab Day Ever
 
-SKIPPY SAFE is a BranchPoint Simulations laboratory-safety judgment game for roughly grades 7–9, adaptable for grades 6–10.
+This repository is currently a story-and-design archive for a future BranchPoint Simulations HTML game.
 
-The student is the Laboratory Safety Lead. Skippy is a cheerful, technically competent robot assistant whose recurring blind spot is risk estimation. The learning goal is not to memorize a checklist. Students investigate evidence, make consequential safety decisions, experience realistic consequences, revise when needed, and decide when the laboratory is genuinely ready.
+No HTML game structure is being built yet.
 
-## Repository status
+## Current project
 
-Current source baseline: SKIPPY SAFE Gemini Gem package v1.1.
+SKIPPY SAFE is a laboratory-safety simulation for roughly grades 7–10.
 
-The HTML game in this repository is exploratory. It is not yet a finished commercial or classroom release.
+The student plays the Laboratory Safety Lead. Skippy is a cheerful, technically competent robot assistant who consistently underestimates risk because he tends to think:
 
-The first development question is:
+> If something can probably work, there is no reason not to try it.
 
-> Can the open, stateful BranchPoint judgment engine in the Gem become an excellent static HTML game without turning into a linear quiz or a chatbot imitation?
+The simulation teaches laboratory safety through investigation, evidence, judgment, consequences, and revision rather than through a checklist or ordinary quiz.
 
-## BranchPoint design principles
+## Current repository contents
 
-The core loop is:
+- `SKIPPY_SAFE_STORY_AND_CONCEPT.md`  
+  The current story premise, character logic, instructional goals, hazards, consequence philosophy, and ending direction.
+
+- `FUTURE_HTML_GAME_DIRECTION.md`  
+  A short record of what should be preserved when the project is eventually explored as an HTML game.
+
+## Current status
+
+The Gemini Gem version has reached v1.1 and has already been stress-tested and revised.
+
+This repository is not yet an implementation repository. Its purpose right now is to preserve the concept clearly so a future HTML build can begin from the approved simulation rather than reinventing it.
+
+## BranchPoint principle
+
+The technology is not the product. The important intellectual property is the instructional architecture:
 
 ```
 problem
@@ -28,69 +42,4 @@ problem
 → revision or defense
 ```
 
-The browser should provide the environment, evidence, state, character behavior, and consequences. The student should retain the important intellectual work: hazard identification, prioritization, evidence interpretation, causal reasoning, and final authorization.
-
-Important constraints:
-
-- reality and laboratory safety rules determine consequences
-- Skippy is competent and is sometimes correct
-- Skippy must never become the answer key
-- earlier decisions and Skippy damage can affect later play
-- safe, unsafe, and ambiguous conditions should all exist
-- routine safe corrections should not become constant quiz questions
-- major or ambiguous decisions should expose student reasoning
-- the game should remain usable on ordinary school Chromebooks
-- the static game should not collect student names or require accounts
-
-## Repository structure
-
-```
-source/       Current v1.1 Gem source package
-docs/         HTML translation and game-design documentation
-game/         Static HTML prototype
-tests/        Functional and adversarial test plans
-```
-
-## Run the prototype
-
-The prototype uses plain HTML, CSS, and JavaScript with no build step.
-
-For the current vertical slice, open:
-
-```
-game/index.html
-```
-
-A simple local web server is preferred during development because the game uses ES modules. For example:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
-
-```
-http://localhost:8000/game/
-```
-
-## Privacy
-
-The prototype is designed to run entirely in the browser.
-
-- no accounts
-- no student-name collection
-- no API keys
-- no server-side database
-- optional progress stored only in browser localStorage
-
-## Deployment direction
-
-If the static architecture proves successful, the game can later be deployed to a static host such as Cloudflare Pages or GitHub Pages.
-
-## Source of truth
-
-The files in `source/` preserve the current v1.1 Gemini simulation design. The HTML implementation may redesign interaction mechanics where a browser can do better than chat, but it should preserve the underlying BranchPoint instructional architecture.
-
-## Licensing
-
-This repository is public for development visibility. No open-source license has been granted. Unless explicitly stated otherwise, all rights are reserved by the repository owner.
+Future development should preserve that architecture regardless of platform.
